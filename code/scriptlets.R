@@ -3,12 +3,17 @@
 # This script will include a collection of small scripts steps
 # often seen as example code. We're using this solely for demo purposes
 
+# Put globals, installs, and sources here
+source("./util_functions.R")
 
+# Put functions here
 # 1. Prints hello world
 
-myString <- "Hello, World!"
+hello_world <- function () {
+    myString <- "Hello, World!"
+    print (myString)
+}
 
-print (myString)
 
 
 # 2. Square function
@@ -20,7 +25,7 @@ square_it <- function(x){
   return(sq)
 }
 
-square_it(5)
+square_it(10)
 
 
 # 3. Monte Carlo Pi
@@ -35,5 +40,6 @@ for (trials in 1:3000) {
   print(paste(trials, ": ", (count*4) / trials))
 }
 
+montecarloPi(3000)
 
 # END
